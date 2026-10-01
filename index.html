@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="description" content="阴缘堂——专营阴婚、鬼婚、冥配的百年老号。只做死人生意。">
+<title>阴缘堂 · 百年老号 —— 冥界姻缘介绍所</title>
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230a0a0a'/><text x='32' y='46' font-size='42' text-anchor='middle' fill='%238B0000' font-family='KaiTi,serif'>囍</text></svg>">
+<style>
+:root{
+  --red:#8B0000;
+  --red-bright:#a31515;
+  --ink:#0a0a0a;
+  --pale:#e8e0d8;
+  --paper:rgba(24,15,12,.78);
+  --line:rgba(139,0,0,.4);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:radial-gradient(ellipse 120% 90% at 50% -10%, #1a0d0b 0%, transparent 60%), var(--ink);
+  color:var(--pale);
+  font-family:"SimSun","NSimSun","Songti SC","STSong",serif;
+  min-height:100vh;
+  overflow-x:hidden;
+  padding-bottom:150px;
+}
+::selection{background:var(--red);color:var(--pale);}
+::-webkit-scrollbar{width:9px;}
+::-webkit-scrollbar-track{background:#050505;}
+::-webkit-scrollbar-thumb{background:#3a0d0d;border-radius:4px;}
+::-webkit-scrollbar-thumb:hover{background:var(--red);}
+
+/* ===== 顶部红边 ===== */
+body::before{content:"";position:fixed;top:0;left:0;right:0;height:3px;z-index:700;
+  background:linear-gradient(90deg,transparent,var(--red) 30%,var(--red-bright) 50%,var(--red) 70%,transparent);
+  box-shadow:0 0 14px rgba(160,0,0,.8);}
+
+/* ===== 烛光忽明忽暗 ===== */
+#flicker{position:fixed;inset:0;z-index:1;pointer-events:none;mix-blend-mode:screen;
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 40%, rgba(190,50,25,.20), transparent 70%),
+    radial-gradient(ellipse 30% 22% at 18% 82%, rgba(150,30,18,.13), transparent 70%),
+    radial-gradient(ellipse 30% 22% at 82% 82%, rgba(150,30,18,.13), transparent 70%);
+  animation:candle 7.3s ease-in-out infinite;}
+@keyframes candle{
+  0%,100%{opacity:.5} 7%{opacity:.72} 15%{opacity:.46} 23%{opacity:.85}
+  31%{opacity:.58} 40%{opacity:.42} 52%{opacity:.78} 62%{opacity:.52}
+  73%{opacity:.68} 84%{opacity:.45} 93%{opacity:.62}}
+body.deep #flicker{animation-duration:4.2s;}
+body.deeper #flicker{animation-duration:2.6s;}
+
+/* ===== 噪点/旧胶片 ===== */
+#grain{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.055;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='220' height='220' filter='url(%23n)' opacity='0.6'/></svg>"),
+  repeating-linear-gradient(0deg, rgba(0,0,0,.16) 0 1px, transparent 1px 3px);
+  animation:grainShift .9s steps(4) infinite;}
+@keyframes grainShift{
+  0%{background-position:0 0,0 0} 25%{background-position:-60px 30px,0 1px}
+  50%{background-position:40px -50px,0 0} 75%{background-position:-30px -20px,0 2px}
+  100%{background-position:0 0,0 0}}
+
+#wrap{position:relative;z-index:5;max-width:920px;margin:0 auto;padding:0 20px;}
+
+/* ===== 页头 ===== */
+header.top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  padding:22px 2px 16px;border-bottom:1px solid var(--line);}
+.logo{font-family:"KaiTi","STKaiti","KaiTi_GB2312",serif;font-size:26px;letter-spacing:6px;color:var(--pale);}
+.logo .seal{display:inline-block;background:var(--red);color:var(--pale);padding:3px 10px;margin-right:8px;
+  border-radius:4px;transform:rotate(-4deg);font-size:20px;letter-spacing:3px;
+  box-shadow:0 0 16px rgba(160,0,0,.55), inset 0 0 8px rgba(0,0,0,.5);}
+.logo small{display:block;font-size:11px;letter-spacing:5px;color:rgba(232,224,216,.45);margin-top:4px;font-family:"SimSun",serif;}
+nav a{color:rgba(232,224,216,.82);text-decoration:none;margin-left:18px;font-size:14px;letter-spacing:3px;transition:.2s;}
+nav a:hover{color:#fff;text-shadow:0 0 12px rgba(255,70,50,.9);}
+
+/* ===== 灯笼 ===== */
+.lanterns{position:relative;height:0;z-index:6;}
+.lantern{position:absolute;top:-8px;left:6%;width:62px;height:86px;transform-origin:50% -60px;
+  background:radial-gradient(circle at 50% 38%, #c0392b 0%, #7c0f0f 55%, #4a0707 100%);
+  border-radius:50%/46%;box-shadow:0 0 34px rgba(190,45,30,.55), inset 0 0 22px rgba(0,0,0,.6);
+  animation:lanternSway 6s ease-in-out infinite alternate;}
+.lantern.r{left:auto;right:6%;animation-delay:-3s;}
+.lantern::before{content:"";position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:30px;height:12px;background:#2a1c12;border-radius:3px;}
+.lantern::after{content:"";position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);width:22px;height:14px;background:#2a1c12;border-radius:3px;}
+.lantern .tassel{position:absolute;bottom:-58px;left:50%;transform:translateX(-50%);width:2px;height:44px;background:#7c1414;}
+.lantern .ribs{position:absolute;inset:0;border-radius:50%/46%;
+  background:repeating-linear-gradient(90deg, transparent 0 9px, rgba(0,0,0,.25) 9px 11px);}
+.lantern .zi{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:"KaiTi","STKaiti",serif;color:#ffd9c4;font-size:24px;text-shadow:0 0 8px rgba(255,120,80,.8);}
+@keyframes lanternSway{from{transform:rotate(-4deg);}to{transform:rotate(4deg);}}
+
+/* ===== 首页大标题 ===== */
+.hero{position:relative;text-align:center;padding:52px 10px 30px;
+  background:radial-gradient(ellipse 90% 60% at 50% -10%, rgba(150,18,10,.22), transparent 70%);}
+.hero h1{font-family:"KaiTi","STKaiti",serif;font-size:64px;letter-spacing:24px;color:var(--pale);
+  text-shadow:0 0 26px rgba(180,30,20,.55), 0 2px 0 rgba(0,0,0,.8);}
+.hero .tagline{font-size:13px;letter-spacing:6px;color:rgba(232,224,216,.55);margin-top:12px;}
+.hero .slogan{font-family:"KaiTi","STKaiti",serif;font-size:20px;letter-spacing:8px;color:#c96a58;margin-top:20px;}
+
+/* ===== 正堂 + 纸人（纯 CSS border 拼矩形） ===== */
+.hall{position:relative;margin:34px auto 10px;width:min(430px,92%);padding:26px 10px 10px;
+  background:linear-gradient(180deg, rgba(40,14,10,.9), rgba(16,8,6,.95));
+  border:1px solid rgba(139,0,0,.5);box-shadow:0 0 40px rgba(120,10,5,.25), inset 0 0 30px rgba(0,0,0,.7);}
+.hall::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 46% 34% at 26% 30%, rgba(200,60,25,.28), transparent 70%),
+             radial-gradient(ellipse 46% 34% at 74% 30%, rgba(200,60,25,.28), transparent 70%);
+  animation:candle 6s ease-in-out infinite;}
+.hall .hall-title{text-align:center;font-family:"KaiTi","STKaiti",serif;letter-spacing:10px;font-size:15px;color:rgba(232,224,216,.6);}
+.effigy{position:relative;width:150px;height:270px;margin:16px auto 0;transform-origin:50% 0;animation:effigyBreath 9s ease-in-out infinite;}
+@keyframes effigyBreath{0%,100%{transform:rotate(-.8deg)}50%{transform:rotate(.8deg)}}
+.eff-head{position:absolute;top:0;left:50%;transform:translateX(-50%);width:82px;height:96px;
+  background:linear-gradient(180deg,#e8dfd2,#cfc4b4);border:2px solid #26211d;border-radius:44% 44% 40% 40%;}
+.eff-hair{position:absolute;top:-2px;left:-2px;width:82px;height:38px;background:#0d0b0a;border-radius:44% 44% 0 0/90% 90% 0 0;}
+.eff-hair::after{content:"";position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);width:34px;height:12px;background:#0d0b0a;border-radius:0 0 50% 50%;}
+.eff-eye{position:absolute;top:50px;width:20px;height:4px;background:#0d0b0a;border-radius:2px;}
+.eff-eye.l{left:16px;transform:rotate(-4deg);}
+.eff-eye.r{right:16px;transform:rotate(4deg);}
+.eff-cheek{position:absolute;top:64px;width:11px;height:11px;background:rgba(160,30,30,.75);border-radius:50%;}
+.eff-cheek.l{left:11px;}
+.eff-cheek.r{right:11px;}
+.eff-mouth{position:absolute;top:72px;left:50%;transform:translateX(-50%);width:16px;height:8px;
+  border:2px solid transparent;border-bottom:2px solid #7c1212;border-radius:50%;}
+.eff-body{position:absolute;top:98px;left:50%;transform:translateX(-50%);width:86px;height:120px;
+  background:linear-gradient(180deg,#5e0b0b,#3f0707);border:2px solid #2c0404;border-radius:6px 6px 2px 2px;}
+.eff-sash{position:absolute;top:104px;left:50%;transform:translateX(-50%);width:14px;height:108px;background:rgba(230,222,210,.85);}
+.eff-flower{position:absolute;top:128px;left:50%;transform:translateX(-50%);width:26px;height:26px;}
+.eff-flower i{position:absolute;width:12px;height:17px;background:rgba(232,224,216,.92);border-radius:50%;border:1px solid #9a9084;}
+.eff-flower i:nth-child(1){left:7px;top:2px;}
+.eff-flower i:nth-child(2){left:2px;top:8px;transform:rotate(-52deg);}
+.eff-flower i:nth-child(3){left:12px;top:8px;transform:rotate(52deg);}
+.eff-flower i:nth-child(4){left:7px;top:12px;}
+.eff-flower b{position:absolute;left:10px;top:9px;width:6px;height:6px;background:var(--red);border-radius:50%;}
+.eff-arm{position:absolute;top:112px;width:22px;height:78px;background:linear-gradient(180deg,#5e0b0b,#3f0707);border:2px solid #2c0404;border-radius:8px;}
+.eff-arm.l{left:-8px;transform:rotate(10deg);}
+.eff-arm.r{right:-8px;transform:rotate(-10deg);}
+.eff-leg{position:absolute;top:214px;width:34px;height:52px;background:linear-gradient(180deg,#3f0707,#2c0404);border:2px solid #1d0303;border-radius:4px;}
+.eff-leg.l{left:24px;}
+.eff-leg.r{right:24px;}
+.hall .hall-caption{margin-top:12px;text-align:center;font-size:12px;letter-spacing:4px;color:rgba(232,224,216,.5);padding-bottom:12px;}
+
+/* ===== 内容卡 ===== */
+section.card{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:28px 32px;margin:26px 0;position:relative;}
+section.card::after{content:"";position:absolute;inset:6px;border:1px solid rgba(139,0,0,.12);pointer-events:none;border-radius:2px;}
+section.card h3{font-family:"KaiTi","STKaiti",serif;font-size:22px;letter-spacing:6px;color:#d8a89c;margin-bottom:16px;padding-left:12px;border-left:3px solid var(--red);}
+section.card p{line-height:2.05;font-size:15px;letter-spacing:1.5px;color:rgba(232,224,216,.9);margin:10px 0;}
+section.card p.small{font-size:12.5px;color:rgba(232,224,216,.52);letter-spacing:2px;}
+section.card ul{list-style:none;margin:10px 0 0 6px;}
+section.card li{line-height:2.1;font-size:14.5px;letter-spacing:1.5px;color:rgba(232,224,216,.85);padding-left:22px;position:relative;}
+section.card li::before{content:"·";position:absolute;left:4px;color:var(--red-bright);font-weight:bold;}
+.odd{color:#c96a58 !important;}
+
+/* ===== 成功案例（一眼假旧照片） ===== */
+.case{display:flex;gap:20px;align-items:flex-start;margin:18px 0;}
+.photo{width:172px;flex:0 0 auto;border:4px double #3d2a24;padding:6px;background:#14100d;
+  box-shadow:0 6px 18px rgba(0,0,0,.6);transform:rotate(-1.4deg);}
+.case:nth-child(2n) .photo{transform:rotate(1.6deg);}
+.photo img{width:100%;display:block;filter:sepia(.25) contrast(1.06);}
+.photo .cap{font-size:10.5px;color:rgba(232,224,216,.5);text-align:center;margin-top:5px;letter-spacing:1px;}
+.quote{flex:1;}
+.quote p{font-family:"KaiTi","STKaiti",serif;font-size:14.5px;line-height:2;color:rgba(232,224,216,.85);}
+.quote .who{font-size:12px;color:rgba(232,224,216,.45);margin-top:6px;letter-spacing:2px;}
+
+/* ===== 搜索坞 ===== */
+#searchDock{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:800;width:min(580px,94vw);}
+#searchMsg{position:absolute;bottom:calc(100% + 10px);left:0;right:0;text-align:center;font-family:"KaiTi","STKaiti",serif;
+  font-size:14px;letter-spacing:3px;opacity:0;transition:opacity .5s;pointer-events:none;min-height:22px;}
+#searchMsg.show{opacity:1;}
+#searchMsg.faint{color:rgba(200,180,170,.55);}
+#searchMsg.taboo{color:#e03030;text-shadow:0 0 12px rgba(220,40,40,.7);font-size:15px;}
+#searchForm{display:flex;gap:8px;background:rgba(12,8,6,.94);border:1px solid rgba(139,0,0,.6);
+  padding:9px 12px;border-radius:4px;box-shadow:0 0 26px rgba(139,0,0,.28), inset 0 0 16px rgba(0,0,0,.65);}
+#searchInput{flex:1;background:transparent;border:none;outline:none;color:var(--pale);
+  font-family:"KaiTi","STKaiti",serif;font-size:16px;letter-spacing:2px;caret-color:var(--red-bright);min-width:0;}
+#searchInput::placeholder{color:rgba(232,224,216,.38);}
+#searchBtn{background:var(--red);color:var(--pale);border:1px solid #5c0606;padding:7px 18px;cursor:pointer;
+  font-family:"KaiTi","STKaiti",serif;font-size:14px;letter-spacing:4px;border-radius:2px;transition:.2s;white-space:nowrap;}
+#searchBtn:hover{background:#a51515;box-shadow:0 0 14px rgba(190,20,20,.6);}
+#searchHint{text-align:center;font-size:11px;letter-spacing:4px;color:rgba(232,224,216,.34);margin-top:7px;}
+
+/* ===== 摇晃的囍 ===== */
+#xi{position:fixed;right:22px;bottom:12px;z-index:790;font-family:"KaiTi","STKaiti",serif;font-size:36px;
+  color:var(--red);transform-origin:50% -140px;animation:xiSwing 7s ease-in-out infinite alternate;
+  text-shadow:0 0 18px rgba(160,0,0,.7);user-select:none;pointer-events:none;opacity:.9;}
+@keyframes xiSwing{from{transform:rotate(-8deg);}to{transform:rotate(8deg);}}
+#xi.pale{color:var(--pale);text-shadow:0 0 18px rgba(232,224,216,.5);}
+
+/* ===== 页脚 ===== */
+footer{text-align:center;padding:46px 10px 8px;font-size:12px;letter-spacing:3px;color:rgba(232,224,216,.4);border-top:1px solid var(--line);margin-top:30px;}
+footer a{color:rgba(200,120,110,.75);cursor:pointer;text-decoration:none;font-size:11px;letter-spacing:2px;}
+footer a:hover{color:#fff;text-shadow:0 0 10px rgba(255,60,40,.8);}
+
+/* ===== 黑幕过渡 ===== */
+#blackout{position:fixed;inset:0;z-index:900;background:#000;opacity:0;pointer-events:none;transition:opacity .8s ease;}
+#blackout.on{opacity:1;pointer-events:auto;}
+
+/* ===== 宗卷（隐藏页） ===== */
+.dossier{position:relative;max-width:760px;margin:34px auto 30px;padding:38px 42px 34px;
+  background:linear-gradient(180deg, rgba(30,16,12,.9), rgba(12,7,5,.96));
+  border:1px solid rgba(139,0,0,.55);box-shadow:0 0 44px rgba(120,8,4,.3), inset 0 0 34px rgba(0,0,0,.75);}
+.dossier::before{content:"";position:absolute;inset:8px;border:1px solid rgba(139,0,0,.16);pointer-events:none;}
+.dossier-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px dashed rgba(139,0,0,.5);padding-bottom:12px;}
+.dossier-no{font-size:12px;letter-spacing:4px;color:rgba(232,224,216,.5);}
+.dossier-stamp{font-family:"KaiTi","STKaiti",serif;color:var(--red-bright);border:2px solid var(--red-bright);
+  padding:2px 8px;transform:rotate(-6deg);font-size:12px;letter-spacing:2px;opacity:.8;}
+.dossier h2{font-family:"KaiTi","STKaiti",serif;font-size:34px;letter-spacing:10px;text-align:center;margin:26px 0 8px;
+  color:var(--pale);text-shadow:0 0 18px rgba(170,25,20,.5);}
+.dossier .rule{width:180px;height:1px;margin:8px auto 22px;background:linear-gradient(90deg,transparent,var(--red),transparent);}
+.dossier p{line-height:2.2;font-size:16px;letter-spacing:2px;color:rgba(232,224,216,.92);margin:14px 0;font-family:"KaiTi","STKaiti","SimSun",serif;}
+.dossier p.anote{font-size:13px;color:rgba(200,170,160,.55);letter-spacing:2px;}
+.dossier p.bloody{color:#c23a2e;text-shadow:0 0 10px rgba(190,30,25,.4);}
+.dossier p[data-type]{min-height:1.6em;}
+.clue-line{margin-top:30px !important;padding-top:14px;border-top:1px dashed rgba(139,0,0,.4);font-size:12.5px !important;letter-spacing:3px;color:rgba(232,224,216,.42) !important;}
+.back-home{display:block;margin:26px auto 0;background:transparent;border:1px solid rgba(139,0,0,.6);color:rgba(232,224,216,.75);
+  padding:8px 22px;cursor:pointer;font-family:"KaiTi","STKaiti",serif;letter-spacing:4px;font-size:13px;transition:.2s;}
+.back-home:hover{background:var(--red);color:#fff;box-shadow:0 0 14px rgba(190,20,20,.5);}
+.corner-ghost{position:absolute;right:26px;bottom:20px;font-family:"KaiTi","STKaiti",serif;font-size:22px;letter-spacing:8px;
+  color:rgba(232,224,216,.07);transform:rotate(-4deg);user-select:none;transition:color .6s;}
+.corner-ghost:hover{color:rgba(232,224,216,.35);}
+.dphoto{display:block;width:188px;margin:18px auto;border:4px double #3d2a24;padding:5px;background:#14100d;
+  box-shadow:0 6px 18px rgba(0,0,0,.6);transform:rotate(-1.2deg);}
+
+/* ===== 灵牌 ===== */
+.tablet{margin:20px auto;width:150px;text-align:center;}
+.tablet .board{background:linear-gradient(180deg,#6e0b0b,#4a0606);border:3px solid #2c0404;border-radius:10px 10px 4px 4px;
+  padding:18px 8px 12px;box-shadow:0 8px 20px rgba(0,0,0,.65), 0 0 18px rgba(150,10,10,.3);}
+.tablet .board .name{font-family:"KaiTi","STKaiti",serif;color:var(--pale);font-size:19px;letter-spacing:6px;
+  writing-mode:vertical-rl;margin:0 auto;text-orientation:upright;}
+.tablet .foot{width:70px;height:14px;background:#2c0404;margin:0 auto;border-radius:2px;}
+
+/* ===== 文字抖动 ===== */
+.jitter{animation:jit .22s steps(2) infinite;}
+@keyframes jit{
+  0%{transform:translate(0,0)} 25%{transform:translate(-.7px,.5px)}
+  50%{transform:translate(.6px,-.6px)} 75%{transform:translate(.5px,.6px)}
+  100%{transform:translate(0,0)}}
+.jitter-hard{animation:jitHard .12s steps(2) infinite;}
+@keyframes jitHard{
+  0%{transform:translate(0,0)}
+  20%{transform:translate(-1.6px,1.1px) rotate(-.15deg)}
+  40%{transform:translate(1.4px,-1.3px)}
+  60%{transform:translate(1.2px,1.4px) rotate(.15deg)}
+  80%{transform:translate(-1.3px,-1.2px)}
+  100%{transform:translate(0,0)}}
+
+/* ===== 突脸惊吓 ===== */
+#scareOverlay{position:fixed;inset:0;z-index:1000;background:#000;opacity:0;pointer-events:none;
+  display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .18s;}
+#scareOverlay.on{opacity:1;pointer-events:auto;}
+#scareOverlay.calm .facebox{display:none;}
+#scareOverlay.out{opacity:0;transition:opacity 1.4s ease;}
+.facebox{position:relative;}
+.facebox svg{height:min(82vh,70vw);filter:drop-shadow(0 0 42px rgba(130,0,0,.5));}
+#scareOverlay.on .facebox{animation:faceShake .2s steps(2) infinite;}
+@keyframes faceShake{
+  0%{transform:translate(0,0) rotate(-1.6deg) scale(1)}
+  25%{transform:translate(-10px,7px) rotate(1.4deg) scale(1.03)}
+  50%{transform:translate(9px,-9px) rotate(-1deg) scale(.985)}
+  75%{transform:translate(11px,8px) rotate(1.8deg) scale(1.02)}
+  100%{transform:translate(0,0) rotate(-1.6deg) scale(1)}}
+.scare-cap{position:absolute;bottom:5vh;left:0;right:0;text-align:center;
+  font-family:"KaiTi","STKaiti",serif;font-size:22px;letter-spacing:12px;color:rgba(220,60,50,.85);
+  text-shadow:0 0 16px rgba(200,20,15,.8);opacity:0;pointer-events:none;}
+#scareOverlay.on .scare-cap{animation:capFlick 1.1s steps(2) infinite;}
+@keyframes capFlick{0%,100%{opacity:.9} 30%{opacity:.15} 55%{opacity:.75} 70%{opacity:.2}}
+.face-v{display:none;}
+#scareOverlay.v1 .face-v.v1{display:block;}
+#scareOverlay.v2 .face-v.v2{display:block;}
+#scareOverlay.v3 .face-v.v3{display:block;}
+
+/* ===== 二周目（红白颠倒） ===== */
+body.reversed{background:radial-gradient(ellipse 120% 90% at 50% -10%, #1a1a20 0%, transparent 60%), #0c0c0e;}
+body.reversed::before{background:linear-gradient(90deg,transparent,#e8e0d8 30%,#fff 50%,#e8e0d8 70%,transparent);box-shadow:0 0 14px rgba(232,224,216,.35);}
+body.reversed #flicker{background:radial-gradient(ellipse 55% 45% at 50% 40%, rgba(220,220,235,.14), transparent 70%),radial-gradient(ellipse 30% 22% at 18% 82%, rgba(200,200,220,.10), transparent 70%),radial-gradient(ellipse 30% 22% at 82% 82%, rgba(200,200,220,.10), transparent 70%);}
+body.reversed .dossier h2{color:#f4f0ea;text-shadow:0 0 18px rgba(210,210,225,.3);}
+body.reversed .dossier-stamp{color:#e8e0d8;border-color:#e8e0d8;}
+body.reversed .hall{background:linear-gradient(180deg, rgba(30,30,34,.9), rgba(14,14,16,.95));border-color:rgba(232,224,216,.35);}
+body.reversed .lantern{filter:grayscale(.9) brightness(1.25);}
+body.reversed #xi{color:#e8e0d8;text-shadow:0 0 18px rgba(232,224,216,.5);}
+#scareOverlay.v4 .face-v.v4{display:block;}
+
+/* ===== 耳语 ===== */
+#whisper{position:fixed;left:18px;bottom:24vh;z-index:780;pointer-events:none;user-select:none;
+  font-family:"KaiTi","STKaiti",serif;font-size:15px;letter-spacing:6px;color:rgba(232,224,216,.3);
+  text-shadow:0 0 10px rgba(180,40,30,.4);opacity:0;transition:opacity .8s;transform:rotate(-2deg);}
+#whisper.show{opacity:1;}
+
+@media (max-width:640px){
+  .hero h1{font-size:44px;letter-spacing:14px;}
+  section.card{padding:20px 18px;}
+  .dossier{padding:26px 20px;}
+  .case{flex-direction:column;}
+  nav a{margin-left:10px;font-size:12.5px;}
+}
+</style>
+</head>
+<body>
+<noscript><p style="text-align:center;padding:40px;color:#e8e0d8;">本页需要 JavaScript。没有了它，您什么也查不到——而它，什么都能查到。</p></noscript>
+<div id="flicker"></div>
+<div id="grain"></div>
+
+<div id="wrap">
+  <header class="top">
+    <div class="logo">
+      <span class="seal">陰</span>阴缘堂
+      <small>冥界姻缘介绍所 · 百年老号</small>
+    </div>
+    <nav>
+      <a href="#services" data-nav>服务项目</a>
+      <a href="#cases" data-nav>成功案例</a>
+      <a href="#about" data-nav>关于我们</a>
+      <a href="#contact" data-nav>联系我们</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="lanterns">
+        <div class="lantern"><div class="ribs"></div><div class="zi">喜</div><div class="tassel"></div></div>
+        <div class="lantern r"><div class="ribs"></div><div class="zi">囍</div><div class="tassel"></div></div>
+      </div>
+      <h1>阴缘堂</h1>
+      <p class="tagline">—— 专司冥界姻缘 · 只做死人生意 ——</p>
+      <p class="slogan">阴阳两隔，亦可结缘。</p>
+
+      <div class="hall">
+        <p class="hall-title">正 堂</p>
+        <div class="effigy" aria-hidden="true">
+          <div class="eff-arm l"></div><div class="eff-arm r"></div>
+          <div class="eff-body">
+            <div class="eff-sash"></div>
+            <div class="eff-flower"><i></i><i></i><i></i><i></i><b></b></div>
+          </div>
+          <div class="eff-head">
+            <div class="eff-hair"></div>
+            <div class="eff-eye l"></div><div class="eff-eye r"></div>
+            <div class="eff-cheek l"></div><div class="eff-cheek r"></div>
+            <div class="eff-mouth"></div>
+          </div>
+          <div class="eff-leg l"></div><div class="eff-leg r"></div>
+        </div>
+        <p class="hall-caption">堂上纸人 · 喜服白花 · 红白颠倒</p>
+      </div>
+    </section>
+
+    <section class="card" id="services">
+      <h3>服务项目</h3>
+      <ul>
+        <li>冥配择吉 —— 本所专营阴婚、鬼婚、冥配，俗称冥婚。八字不合者，亦可面议。</li>
+        <li>灵位合婚 —— 为未婚早夭之男女合葬、立碑、写谱，入族谱，享香火。</li>
+        <li>抱主代嫁 —— 特殊业务。需主家亲至面谈，恕不函询。</li>
+        <li>纸扎聘礼 —— 花轿、喜钱、宅院、车马、童男童女，均为一比一等身扎制。</li>
+      </ul>
+      <p class="small">※ 以上服务仅面向已故人士。本所只办理已故人士的婚配事宜，活人勿询。</p>
+    </section>
+
+    <section class="card" id="cases">
+      <h3>成功案例</h3>
+      <div class="case">
+        <div class="photo"><img data-photo="wedding" alt="陈府合婚留影"><div class="cap">陈府 · 合婚留影（光绪廿三年）</div></div>
+        <div class="quote">
+          <p>「先父去世三年，屡屡托梦，说独身寂寞。本堂为其寻得城南早夭女子合婚。三日后，先父再未入梦。只是家母说，她开始梦见那位女子了。」</p>
+          <p class="who">—— 陈府 · 陈氏</p>
+        </div>
+      </div>
+      <div class="case">
+        <div class="photo"><img data-photo="portrait_home" alt="城南沈氏之女遗照"><div class="cap">城南沈氏之女 · 遗照</div></div>
+        <div class="quote">
+          <p>「家妹十八而夭，夜半常闻其哭。合婚之后，哭声渐止。只是……偶尔还能听见她笑。就在堂屋，就在半夜。」</p>
+          <p class="who">—— 一位不愿具名的兄长</p>
+        </div>
+      </div>
+      <div class="case">
+        <div class="quote">
+          <p>「很满意。就是新房里多了一双绣花鞋。不是我们摆的。」</p>
+          <p class="who">—— 匿名主顾</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="about">
+      <h3>关于我们</h3>
+      <p>本堂创立于光绪年间，主理人世代相传，现任主理：沈先生（沈氏后人）。</p>
+      <p>本所已有百年历史。百年间，经手冥配千余桩，无一退单。</p>
+      <p class="odd">营业时间：子时至寅时（23:00 — 05:00）。日间恕不接待。</p>
+      <p class="small">※ 若您在日间访问本站，请立即关闭，并在子时之后重新进入。</p>
+    </section>
+
+    <section class="card" id="contact">
+      <h3>联系我们</h3>
+      <p>地址：城西槐树巷十三号（槐树最大那棵底下）。</p>
+      <p>电话：子时拨响三声即挂，自会有人上门。勿在电话里报出活人名讳。</p>
+      <p>来信请附逝者生辰八字，并注明「阴缘堂亲启」。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 光绪二十三年 至今 · 阴缘堂 —— 未经许可，请勿在午夜访问本站</p>
+    <p style="margin-top:10px;"><a id="scareToggle" title="开关突脸惊吓与音效">恐怖效果：——</a></p>
+    <p style="margin-top:8px;font-size:10px;letter-spacing:2px;color:rgba(232,224,216,.25);">如有不适，请立即关闭本页</p>
+  </footer>
+</div>
+
+<div id="searchDock">
+  <div id="searchMsg"></div>
+  <form id="searchForm" autocomplete="off">
+    <input id="searchInput" type="text" placeholder="请输入您要查询的服务…" aria-label="查询">
+    <button id="searchBtn" type="submit">查询</button>
+  </form>
+  <div id="searchHint">本所只办理已故人士的婚配事宜</div>
+</div>
+
+<div id="xi">囍</div>
+
+<div id="blackout"></div>
+
+<div id="scareOverlay" aria-hidden="true">
+  <div class="facebox">
+    <svg class="face-v v1" viewBox="0 0 640 720" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="sg1" cx="50%" cy="40%" r="62%">
+          <stop offset="0%" stop-color="#f0e9de"/>
+          <stop offset="62%" stop-color="#cdc2b0"/>
+          <stop offset="100%" stop-color="#6e655a"/>
+        </radialGradient>
+      </defs>
+      <path d="M110,320 C80,40 280,10 320,30 C360,10 560,40 530,320 C575,160 470,80 320,100 C170,80 65,160 110,320 Z" fill="#050505"/>
+      <ellipse cx="320" cy="390" rx="215" ry="250" fill="url(#sg1)" stroke="#0a0a0a" stroke-width="8"/>
+      <ellipse cx="243" cy="352" rx="50" ry="64" fill="#000"/>
+      <ellipse cx="397" cy="352" rx="60" ry="76" fill="#000"/>
+      <circle cx="248" cy="362" r="11" fill="#8B0000"/>
+      <circle cx="390" cy="345" r="10" fill="#8B0000"/>
+      <path d="M243,418 C243,472 258,505 261,545" stroke="#5a0a0a" stroke-width="9" fill="none" stroke-linecap="round" opacity=".85"/>
+      <path d="M397,428 C397,478 380,505 376,540" stroke="#5a0a0a" stroke-width="9" fill="none" stroke-linecap="round" opacity=".7"/>
+      <path d="M320,430 L320,482" stroke="rgba(0,0,0,.28)" stroke-width="6" stroke-linecap="round"/>
+      <path d="M168,480 C220,625 420,625 472,480 C420,530 220,530 168,480 Z" fill="#050505"/>
+      <path d="M196,476 L230,516 L258,472 L286,522 L314,474 L342,524 L370,474 L398,520 L424,478 L448,514 L458,480 Z" fill="#e8e0d8" opacity=".9"/>
+      <g transform="translate(506,132)">
+        <ellipse cx="0" cy="-15" rx="12" ry="19" fill="#e8e0d8"/>
+        <ellipse cx="0" cy="-15" rx="12" ry="19" fill="#e8e0d8" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-15" rx="12" ry="19" fill="#e8e0d8" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-15" rx="12" ry="19" fill="#e8e0d8" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-15" rx="12" ry="19" fill="#e8e0d8" transform="rotate(288)"/>
+        <circle r="5.5" fill="#8B0000"/>
+      </g>
+    </svg>
+    <svg class="face-v v2" viewBox="0 0 640 720" xmlns="http://www.w3.org/2000/svg">
+      <rect x="130" y="80" width="380" height="500" rx="130" fill="#efe7da" stroke="#141414" stroke-width="10"/>
+      <path d="M130,250 L510,250 M130,420 L510,420" stroke="rgba(0,0,0,.07)" stroke-width="3"/>
+      <path d="M130,240 C110,120 250,70 320,70 C390,70 530,120 510,240 C510,170 420,110 320,110 C220,110 130,170 130,240 Z" fill="#0a0a0a"/>
+      <g stroke="#0a0a0a" stroke-width="9" stroke-linecap="round">
+        <line x1="196" y1="268" x2="272" y2="300"/>
+        <line x1="272" y1="268" x2="196" y2="300"/>
+        <line x1="368" y1="268" x2="444" y2="300"/>
+        <line x1="444" y1="268" x2="368" y2="300"/>
+      </g>
+      <circle cx="200" cy="290" r="15" fill="#a02525" opacity=".85"/>
+      <circle cx="440" cy="290" r="15" fill="#a02525" opacity=".85"/>
+      <path d="M240,430 C285,478 355,478 400,430" stroke="#7c1212" stroke-width="9" fill="none" stroke-linecap="round" stroke-dasharray="17 10"/>
+      <g transform="translate(320,558)">
+        <ellipse cx="0" cy="-13" rx="10" ry="16" fill="#e8e0d8"/>
+        <ellipse cx="0" cy="-13" rx="10" ry="16" fill="#e8e0d8" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-13" rx="10" ry="16" fill="#e8e0d8" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-13" rx="10" ry="16" fill="#e8e0d8" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-13" rx="10" ry="16" fill="#e8e0d8" transform="rotate(288)"/>
+        <circle r="5" fill="#8B0000"/>
+      </g>
+    </svg>
+    <svg class="face-v v3" viewBox="0 0 640 720" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="sg3" cx="50%" cy="42%" r="62%">
+          <stop offset="0%" stop-color="#ddd6c6"/>
+          <stop offset="62%" stop-color="#b3ab99"/>
+          <stop offset="100%" stop-color="#5c574c"/>
+        </radialGradient>
+      </defs>
+      <g stroke="#050505" stroke-width="13" stroke-linecap="round" fill="none">
+        <path d="M150,180 C172,320 138,430 158,540"/>
+        <path d="M490,180 C468,320 502,430 482,540"/>
+        <path d="M250,120 C262,240 240,320 252,400"/>
+        <path d="M390,120 C378,240 400,320 388,400"/>
+      </g>
+      <ellipse cx="320" cy="400" rx="220" ry="250" fill="url(#sg3)" stroke="#0a0a0a" stroke-width="8"/>
+      <g stroke="#000" stroke-width="10" stroke-linecap="round">
+        <line x1="205" y1="330" x2="278" y2="352"/>
+        <line x1="435" y1="330" x2="362" y2="352"/>
+      </g>
+      <circle cx="250" cy="344" r="8" fill="#8B0000"/>
+      <circle cx="390" cy="344" r="8" fill="#8B0000"/>
+      <path d="M278,352 C302,424 292,476 304,522" stroke="#6e0b0b" stroke-width="10" fill="none" stroke-linecap="round" opacity=".85"/>
+      <path d="M362,352 C338,430 348,482 336,540" stroke="#6e0b0b" stroke-width="10" fill="none" stroke-linecap="round" opacity=".85"/>
+      <ellipse cx="320" cy="530" rx="66" ry="90" fill="#000"/>
+      <path d="M254,530 C288,480 352,480 386,530" stroke="rgba(224,212,200,.3)" stroke-width="4" fill="none"/>
+    </svg>
+    <svg class="face-v v4" viewBox="0 0 640 720" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="sg4" cx="50%" cy="42%" r="62%">
+          <stop offset="0%" stop-color="#d8d2c4"/>
+          <stop offset="60%" stop-color="#a89f8e"/>
+          <stop offset="100%" stop-color="#4c473d"/>
+        </radialGradient>
+      </defs>
+      <path d="M90,300 C60,60 280,0 320,20 C360,0 580,60 550,300 C590,140 480,60 320,80 C160,60 50,140 90,300 Z" fill="#050505"/>
+      <ellipse cx="320" cy="400" rx="220" ry="245" fill="url(#sg4)" stroke="#0a0a0a" stroke-width="8"/>
+      <g stroke="#0a0a0a" stroke-width="5" fill="none" opacity=".5">
+        <path d="M130,300 Q200,290 250,310"/>
+        <path d="M390,310 Q440,290 510,300"/>
+        <path d="M120,420 Q190,415 240,425"/>
+        <path d="M400,425 Q450,415 520,420"/>
+        <path d="M180,520 Q240,530 300,520"/>
+      </g>
+      <ellipse cx="240" cy="330" rx="34" ry="20" fill="#000"/>
+      <ellipse cx="400" cy="330" rx="34" ry="20" fill="#000"/>
+      <circle cx="242" cy="328" r="7" fill="#f0ece0"/>
+      <circle cx="398" cy="328" r="7" fill="#f0ece0"/>
+      <path d="M320,420 L320,470" stroke="rgba(0,0,0,.3)" stroke-width="6" stroke-linecap="round"/>
+      <path d="M230,520 C270,550 370,550 410,520 C370,500 270,500 230,520 Z" fill="#000"/>
+      <path d="M240,518 L270,536 L300,516 L330,538 L360,516 L390,536 L400,520 Z" fill="#e8e0d8" opacity=".8"/>
+      <g stroke="#6e0b0b" stroke-width="8" fill="none" stroke-linecap="round" opacity=".8">
+        <path d="M240,350 C238,390 250,420 252,460"/>
+        <path d="M400,350 C402,390 390,420 388,460"/>
+      </g>
+    </svg>
+  </div>
+  <div class="scare-cap"></div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* ================= 状态 ================= */
+var main = document.getElementById('main');
+var HOME_HTML = main.innerHTML;
+var blackout = document.getElementById('blackout');
+var searchForm = document.getElementById('searchForm');
+var searchInput = document.getElementById('searchInput');
+var searchMsg = document.getElementById('searchMsg');
+var searchHint = document.getElementById('searchHint');
+var scareToggle = document.getElementById('scareToggle');
+var xi = document.getElementById('xi');
+var scareOverlay = document.getElementById('scareOverlay');
+
+var currentPage = 'home';
+var progress = -1;
+var stage = 1;
+var stage1Max = -1;
+var gameOver = false;
+var scareEnabled = false;
+var scaring = false;
+var busy = false;
+var typeToken = 0;
+var msgTimer = null;
+var audioCtx = null;
+var droneNodes = null;
+var firstScareDone = false;
+var phoneDone = false;
+var phoneRetry = 0;
+var wrongCount = 0;
+var heartbeatTimer = null;
+var whisperTimer = null;
+
+/* ================= 宗卷（关键词 → 页面） ================= */
+var STORY1 = [
+  {
+    key:'冥婚', scare:0, docTitle:'阴缘堂 · 宗卷其一 —— 冥婚',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">宗卷 · 其一</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>冥 婚</h2><div class="rule"></div>'+
+      '<p data-type>您查询的服务：冥婚。本所正在为您调取宗卷……</p>'+
+      '<p data-type>检索中……检索到相关宗卷一百四十七卷。其中一百四十六卷，已封存。</p>'+
+      '<p data-type>本所已有百年历史。自光绪年间起，由沈氏后人代代经营，香火从未断绝。</p>'+
+      '<p data-type>宗卷记载：光绪二十三年，沈氏女婉清，年十六，未嫁而卒。</p>'+
+      '<p data-type>名讳：沈婉清。停灵七日，面如生人。</p>'+
+      '<p data-type>沈家做主，将她许配给城东陈府病故长子。</p>'+
+      '<p data-type>送聘那日，沈家门前的水缸，一夜之间结了冰。时值六月。</p>'+
+      '<p data-type class="anote">（守夜人供词："那天夜里，我听见沈小姐在屋里笑。可她分明已经……"）</p>'+
+      '<p data-type class="anote">（供词至此被红笔划去，只留四个字：不准外传。）</p>'+
+      '<p data-type class="anote">（宗卷残页。字迹到此被水渍洇开，模糊难辨。）</p>'+
+      '<p data-type class="anote">（页脚有一行极小的字：谁在查她？）</p>'+
+      '<p data-type class="clue-line">若要继续查阅，请输入卷中人物的名讳。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  },
+  {
+    key:'沈婉清', scare:0, docTitle:'阴缘堂 · 宗卷其二 —— 沈婉清',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">宗卷 · 其二</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>沈 婉 清</h2><div class="rule"></div>'+
+      '<p data-type>沈氏女婉清，年十六，未嫁而卒。</p>'+
+      '<p data-type>生前貌美，善绣。最后一幅是鸳鸯，没绣完，还差一只眼睛。</p>'+
+      '<p data-type>下葬前夜，守灵人听见棺内有梳头声。笃、笃、笃，一夜未停。</p>'+
+      '<p data-type>第二日开棺查看，她的头发，从齐腰，变成了齐地。</p>'+
+      '<p data-type>陈府长子陈守业，病故于同年。两府一拍即合，定下冥婚。</p>'+
+      '<p data-type>出殡那日，陈府命活人抱主成亲，与公鸡拜堂。唢呐吹到第三声，花轿自己晃了一下。</p>'+
+      '<p data-type>抬轿的说，轿子比活着的新娘还重。</p>'+
+      '<p data-type>三年后，陈家满门，夜夜听见喜乐自堂屋传出。</p>'+
+      '<p data-type>陈府请了道士。道士只看了一眼灵位，说：这桩亲事，退不得。</p>'+
+      '<p data-type class="anote">（道士临走，把桃木剑留在了门槛上。第二天，剑柄朝着屋内。）</p>'+
+      '<img class="dphoto" data-photo="portrait_dossier" alt="沈氏婉清遗照">'+
+      '<p data-type class="anote">（相片拍摄于停灵第三日。洗出来时，她眼珠的位置和当日不同。）</p>'+
+      '<p data-type class="clue-line">请输入仪式之名。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  },
+  {
+    key:'抱主成亲', scare:0.15, docTitle:'阴缘堂 · 宗卷其三 —— 抱主成亲',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">宗卷 · 其三</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>抱主成亲</h2><div class="rule"></div>'+
+      '<p data-type>活人抱主成亲，与公鸡拜堂。此乃冥婚中最凶之仪。</p>'+
+      '<p data-type class="anote">（此页纸色发黄，边缘有烧痕。）</p>'+
+      '<p data-type>规程如下：</p>'+
+      '<p data-type>一、择未满十二之男童，怀抱亡者灵位，代行拜礼；</p>'+
+      '<p data-type>二、公鸡冠上系红绳，绳尾拴于灵位之上；</p>'+
+      '<p data-type>三、礼成，当场割鸡颈放血，血涂灵位背面；</p>'+
+      '<p data-type>四、灵牌以红纸写就，非白纸。此即红纸灵牌；</p>'+
+      '<p data-type>五、拜堂时，堂上不得有活人回头。回头者，与亡者照面。</p>'+
+      '<p data-type class="anote">（关于灵牌的记录，被人撕去半页。）</p>'+
+      '<p data-type class="anote">（有人记得，礼成当夜，那男童再没开口说过话。只会在子时，对着墙角作揖。）</p>'+
+      '<p data-type class="anote">（男童之父曾来本所质问，被沈先生请进后堂。出来时，他带着两锭银子，和一张新的委托书。）</p>'+
+      '<p data-type class="clue-line">请输入仪式中的关键之物。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  },
+  {
+    key:'红纸灵牌', scare:0.30, docTitle:'阴缘堂 · 宗卷其四 —— 红纸灵牌',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">宗卷 · 其四</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>红纸灵牌</h2><div class="rule"></div>'+
+      '<p data-type>灵牌以红纸写就，非白纸。</p>'+
+      '<p data-type>红纸为喜，灵位为丧。红纸灵牌，红白颠倒，阴阳不分。</p>'+
+      '<div class="tablet"><div class="board"><div class="name">沈氏婉清之位</div></div><div class="foot"></div></div>'+
+      '<p data-type class="anote">（此物现藏本所库房第三排。编号：壬-17。每日子时，需有一人值夜看管。）</p>'+
+      '<p data-type class="anote">（值夜记录：第一夜，无异常。第二夜，无异常。第三夜，灵牌上的名字，多了一划。）</p>'+
+      '<p data-type>凡行此礼者，须记三忌：</p>'+
+      '<p data-type class="bloody">忌生辰相冲，冲则家宅不安；</p>'+
+      '<p data-type class="bloody">忌尸身不腐，不腐则魂魄不去；</p>'+
+      '<p data-type class="bloody">忌活人配婚，配婚则必遭反噬。</p>'+
+      '<p data-type>然宗卷旁注：槐婆说，生辰必须相冲。</p>'+
+      '<p data-type class="anote">（写这行字的，是城西的阴媒婆。她的字，与三忌自相矛盾。）</p>'+
+      '<p data-type class="anote">（这一页被人撕去了一角。撕口处粘着一根白发。经查，不是人的。）</p>'+
+      '<p data-type class="clue-line">请输入写下这行字的人。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  },
+  {
+    key:'阴媒婆', scare:0.50, docTitle:'阴缘堂 · 档案 —— 阴媒婆',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">档案 · 附卷</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>阴 媒 婆</h2><div class="rule"></div>'+
+      '<p data-type>姓名：不详。人称槐婆。也唤作：阴媒婆。</p>'+
+      '<p data-type>生年：不详。见过她的人都说，她和三十年前一模一样。</p>'+
+      '<p data-type>居所：城西槐树巷，槐树最大那棵底下。</p>'+
+      '<p data-type>她的规矩，共四条：</p>'+
+      '<p data-type>一、只做死人生意；</p>'+
+      '<p data-type>二、生辰必须相冲，越冲越好；</p>'+
+      '<p data-type>三、棺底贴符，头七采阳——此符名为合欢符；</p>'+
+      '<p data-type>四、阴钱七日之内结清。迟一日，折一子。</p>'+
+      '<p data-type class="anote">（注：曾有一户主家迟了九日。他有三个儿子。后来，他没有了。）</p>'+
+      '<img class="dphoto" data-photo="hag" alt="槐婆照片">'+
+      '<p data-type class="anote">（档案所附照片，洗出来只有一团黑。只有眼睛是亮的。）</p>'+
+      '<p data-type class="anote">（洗相馆的小工说，底片上除了槐婆，还站着一个穿喜服的女人。经查，底片上只有槐婆一人。小工次日辞职，去向不明。）</p>'+
+      '<p data-type class="clue-line">请输入符咒之名。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  },
+  {
+    key:'合欢符', scare:0.65, docTitle:'阴缘堂 · 宗卷其六 —— 合欢符', cls:'jitter',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">宗卷 · 其六</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>合 欢 符</h2><div class="rule"></div>'+
+      '<p data-type>以朱砂写于黄纸，字须倒着写。</p>'+
+      '<p data-type>棺底贴符，头七采阳。</p>'+
+      '<p data-type>头七之夜，符引亡魂入新房。八字相冲者，阴气大涨，亡者可……</p>'+
+      '<p data-type class="anote">（字迹开始颤抖）</p>'+
+      '<p data-type class="bloody jitter-hard">可还阳七日。七日之内，与活人无异。会吃，会睡，会唤你的名字。</p>'+
+      '<p data-type class="bloody jitter-hard">棺中的人，会笑。</p>'+
+      '<p data-type class="bloody">腹中如有蛇窜，指生黑甲。</p>'+
+      '<p data-type class="bloody">此物，便是鬼胎。</p>'+
+      '<p data-type class="anote">（余下字迹被撕走。纸张边缘，有指甲抓痕。）</p>'+
+      '<p data-type class="anote">（这页纸曾经是白色的。现在，它是红的。）</p>'+
+      '<p data-type class="clue-line">请输入腹中之物。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  },
+  {
+    key:'鬼胎', scare:0.85, docTitle:'阴缘堂 · 宗卷其七 —— 鬼胎', cls:'jitter',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">宗卷 · 其七</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>鬼 胎</h2><div class="rule"></div>'+
+      '<p data-type>腹中如有蛇窜，指生黑甲。</p>'+
+      '<p data-type>她怀的不是孩子。</p>'+
+      '<p data-type>每到子时，腹中之物便数她的肋骨。数到第十三根，会叫她的名字。</p>'+
+      '<p data-type class="bloody jitter-hard">它叫的是：婉清。</p>'+
+      '<p data-type>她剪下自己的头发，塞进嘴里，想把那东西噎死。</p>'+
+      '<p data-type>它笑了。</p>'+
+      '<p data-type>第十三个月，她生下了一团头发。头发里，包着三枚铜钱。</p>'+
+      '<p data-type class="anote">（铜钱上的年号，比现在早了六十年。）</p>'+
+      '<img class="dphoto" data-photo="fetus" alt="无法显影的照片">'+
+      '<p data-type class="anote">（照片无法正常显影。洗相的人说，底片上多了一个人影。）</p>'+
+      '<p data-type class="anote">（此后每逢甲子，本所都会收到一封信。信封上，只有四个字。）</p>'+
+      '<div class="corner-ghost">甲子重临</div>'+
+      '<p data-type class="clue-line">角落里有字。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  },
+  {
+    key:'甲子重临', scare:1.0, docTitle:'阴缘堂 · 甲子重临',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">宗卷 · 终</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>甲子重临</h2><div class="rule"></div>'+
+      '<p data-type>甲子重临。</p>'+
+      '<p data-type>六十年一轮。今年，又是甲子。</p>'+
+      '<p data-type>您查到了这里。</p>'+
+      '<p data-type>那么，请记住：您的名讳，已被记入册中。</p>'+
+      '<p data-type class="bloody">下一个甲子，会有人来为您说媒。</p>'+
+      '<p data-type>——阴缘堂 敬上</p>'+
+      '<p data-type class="anote">（全文完 · 第一圈完）</p>'+
+      '<p data-type class="anote">（但轮回未止。册中的名字，以朱笔写就。要销，只有一条路——血契。）</p>'+
+      '<p data-type class="clue-line">若您执意自救，请查：血契。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  }
+];
+
+/* ================= 第二圈（自救线） ================= */
+var STORY2 = [
+  {
+    key:'血契', scare:0.5, docTitle:'阴缘堂 · 第二圈其一 —— 血契',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">第二圈 · 其一</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>血 契</h2><div class="rule"></div>'+
+      '<p data-type>血契。以人血写就，朱笔封存。</p>'+
+      '<p data-type>凡入册者，皆签血契。您也不例外。</p>'+
+      '<p data-type>契约内容：一、自愿或"自愿"将终身大事托付本所；二、婚期由本所择定；三、逾期不赴者，本所上门。</p>'+
+      '<p data-type class="anote">（您的签名，笔迹与您本人不符。当然，字是您"签"的。）</p>'+
+      '<p data-type>销契之法有二：</p>'+
+      '<p data-type>其一，以阴钱三千贯赎身。分文不能少。</p>'+
+      '<p data-type class="anote">（其二……此条被墨涂死。涂得很用力，纸都破了。）</p>'+
+      '<p data-type class="clue-line">请输入赎身之物。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  },
+  {
+    key:'阴钱', scare:0.6, docTitle:'阴缘堂 · 第二圈其二 —— 阴钱',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">第二圈 · 其二</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>阴 钱</h2><div class="rule"></div>'+
+      '<p data-type>阴钱。不是您逢年过节烧的那种。</p>'+
+      '<p data-type>本所的阴钱，以一厘为一贯，须用往生者的旧衣裳做引。</p>'+
+      '<p data-type>烧钱有讲究：须在城西槐树巷，槐树最大那棵底下，子时焚烧。</p>'+
+      '<p data-type>烧的时候，不能念名字。念谁，钱就归谁。</p>'+
+      '<p data-type class="anote">（曾有人念了亡妻的名字。当晚，他听见床底下数钱的声音，数了一夜。）</p>'+
+      '<p data-type class="anote">（数目分毫不差。只是第二天，他的头发全白了。）</p>'+
+      '<p data-type class="clue-line">请输入烧钱之地。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  },
+  {
+    key:'槐树巷', scare:0.7, docTitle:'阴缘堂 · 第二圈其三 —— 槐树巷',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">第二圈 · 其三</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>槐树巷</h2><div class="rule"></div>'+
+      '<p data-type>槐树巷。城西。夜里没有路灯。</p>'+
+      '<p data-type>巷口有十三户人家。白天住人，夜里……也住人。</p>'+
+      '<p data-type>槐树最大那棵，长在巷尾。树龄无人知晓。县志上写：明末已有。</p>'+
+      '<p data-type>槐婆已不在树下。树下多了一口空棺。</p>'+
+      '<p data-type class="bloody">空棺的棺盖上，刻着您的生辰。漆是新的。</p>'+
+      '<p data-type class="anote">（守夜的老头说，昨晚看见有人往棺里看了一眼。那人出来时，穿着寿衣。）</p>'+
+      '<p data-type class="clue-line">请输入树下之物。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  },
+  {
+    key:'空棺', scare:0.8, docTitle:'阴缘堂 · 第二圈其四 —— 空棺',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">第二圈 · 其四</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>空 棺</h2><div class="rule"></div>'+
+      '<p data-type>空棺。为您备的。</p>'+
+      '<p data-type>棺内铺着红纸，红纸上印着喜字。</p>'+
+      '<p data-type>本所的规矩：空棺不过夜。过了夜，就要有人睡进去。</p>'+
+      '<p data-type>解法在棺底：返魂香三炷。子时点燃，灰烬吞服。香尽之前，血契自销。</p>'+
+      '<p data-type class="anote">（棺底还刻着一行小字：你早就睡过了。）</p>'+
+      '<p data-type class="clue-line">请输入解法之物。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  },
+  {
+    key:'返魂香', scare:0.9, docTitle:'阴缘堂 · 第二圈其五 —— 返魂香',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">第二圈 · 其五</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>返魂香</h2><div class="rule"></div>'+
+      '<p data-type>返魂香。以槐木制，混以亡者之发。</p>'+
+      '<p data-type>子时点燃，三炷同烧。</p>'+
+      '<p data-type>香尽之前，若闻身后有人唤你的名字，切勿回头。回头一次，阳寿折三年。</p>'+
+      '<p data-type>若闻人声与您同吟，那不是回音。</p>'+
+      '<p data-type>香尽，灰烬趁热吞服。之后七日，不可照镜。</p>'+
+      '<p data-type class="anote">（七日之期，本所不会再上门。第八日，会。）</p>'+
+      '<p data-type class="clue-line">香尽之后还差一步：找到您的名字写在簿上哪一页。请查：簿上名。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  },
+  {
+    key:'簿上名', scare:1.0, docTitle:'阴缘堂 · 簿上名',
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">第二圈 · 终</span><span class="dossier-stamp">阴缘堂 印</span></div>'+
+      '<h2>簿上名</h2><div class="rule"></div>'+
+      '<p data-type>簿。本所的生死簿。厚得没有最后一页。</p>'+
+      '<p data-type>您翻到了那一页。上面写着的，不是您的名字。</p>'+
+      '<p data-type class="bloody">是您的忌日。</p>'+
+      '<p data-type class="anote">（忌日：甲子年，甲子月，甲子日。就是今天。）</p>'+
+      '<p data-type class="anote">（您听见身后有纸页翻动的声音。）</p>'+
+      '<p data-type class="anote">（全文终 · 第二圈完）</p>'+
+      '<p data-type class="bloody">（本所已将门关上。欢迎您，长住。）</p>'+
+      '<p data-type>游戏结束。感谢您的勇气。如有不适，请立刻关闭本页。</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'
+  }
+];
+
+/* ================= 附录（旁支词条，不解锁主线） ================= */
+var APPENDIX = {
+  '纸扎':{requires:-1,
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">附录 · 纸扎</span><span class="dossier-stamp">阴缘堂 抄</span></div>'+
+      '<h2>纸 扎</h2><div class="rule"></div>'+
+      '<p data-type>纸扎。本所的另一门生意。</p>'+
+      '<p data-type>纸扎铺的规矩：扎人不点睛。点睛必成活。</p>'+
+      '<p data-type>本所扎的童男童女，都是不点睛的。</p>'+
+      '<p data-type class="anote">（但有一年，扎铺的学徒喝醉了酒，给一个纸扎新娘点了睛。）</p>'+
+      '<p data-type class="anote">（第二天，那纸人不在铺子里了。铺子的门，是从里面闩上的。）</p>'+
+      '<p data-type class="anote">（附录完）</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'},
+  '绣花鞋':{requires:-1,
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">附录 · 绣花鞋</span><span class="dossier-stamp">阴缘堂 抄</span></div>'+
+      '<h2>绣花鞋</h2><div class="rule"></div>'+
+      '<p data-type>绣花鞋。匿名主顾报称，新房中多出一双。</p>'+
+      '<p data-type>本所派人查验：鞋是新的，鞋底无尘。尺码，与亡妻一致。</p>'+
+      '<p data-type>三日后，又报多出一双。再三日，又一双。</p>'+
+      '<p data-type class="anote">（截止封档，共多出十七双。全是左脚。）</p>'+
+      '<p data-type class="anote">（第十七双鞋里，塞着一张纸条：够一双了吗？）</p>'+
+      '<p data-type class="anote">（附录完）</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'},
+  '花轿':{requires:1,
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">附录 · 花轿</span><span class="dossier-stamp">阴缘堂 抄</span></div>'+
+      '<h2>花 轿</h2><div class="rule"></div>'+
+      '<p data-type>花轿。沈氏婉清出嫁所用。</p>'+
+      '<p data-type>出殡那日，花轿自己晃了一下。抬轿人皆称无风。</p>'+
+      '<p data-type>事后查验，轿底压着一双红绣鞋，鞋头朝内。</p>'+
+      '<p data-type class="anote">（轿子后来卖给了一户娶亲的人家。那家新娘下轿时，脚上穿着一模一样的鞋。）</p>'+
+      '<p data-type class="anote">（新娘说，鞋是轿子里"长"出来的。）</p>'+
+      '<p data-type class="anote">（附录完）</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'},
+  '唢呐':{requires:1,
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">附录 · 唢呐</span><span class="dossier-stamp">阴缘堂 抄</span></div>'+
+      '<h2>唢 呐</h2><div class="rule"></div>'+
+      '<p data-type>唢呐。喜乐班子所用。</p>'+
+      '<p data-type>陈府冥婚之后，堂屋夜夜传喜乐。请来三个班子，都说是自己吹的，可他们那夜都不在。</p>'+
+      '<p data-type>后来请了第四个班子。老班主听了一夜，说：吹的是《抬花轿》，但调子是反的。</p>'+
+      '<p data-type class="anote">（反着吹的喜乐，是给死人听的。）</p>'+
+      '<p data-type class="anote">（附录完）</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'},
+  '公鸡':{requires:2,
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">附录 · 公鸡</span><span class="dossier-stamp">阴缘堂 抄</span></div>'+
+      '<h2>公 鸡</h2><div class="rule"></div>'+
+      '<p data-type>公鸡。拜堂所用，冠上系红绳。</p>'+
+      '<p data-type>礼成当晚，公鸡死在供桌上。颈上红绳不见了。</p>'+
+      '<p data-type>后来，那根红绳出现在男童的手腕上。解不开。</p>'+
+      '<p data-type class="anote">（男童说，鸡死之前叫了七声。第七声，是他自己的声音。）</p>'+
+      '<p data-type class="anote">（附录完）</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'},
+  '头七':{requires:5,
+    html:
+    '<div class="dossier">'+
+      '<div class="dossier-head"><span class="dossier-no">附录 · 头七</span><span class="dossier-stamp">阴缘堂 抄</span></div>'+
+      '<h2>头 七</h2><div class="rule"></div>'+
+      '<p data-type>头七。亡者回魂之日。</p>'+
+      '<p data-type>民间传说，亡魂头七返家，家人须避让，以免冲撞。</p>'+
+      '<p data-type>本所的说法不同：头七，是亡魂"最像活人"的一夜。</p>'+
+      '<p data-type>采阳之法：于头七之夜，引亡魂与生人同榻。生人的阳气，会被一点点换走。</p>'+
+      '<p data-type class="anote">（换走的那部分，本所另有用处。）</p>'+
+      '<p data-type class="anote">（您每晚都睡得很好，对吧？）</p>'+
+      '<p data-type class="anote">（附录完）</p>'+
+      '<button class="back-home" type="button">◀ 返回首页</button>'+
+    '</div>'}
+};
+
+/* ================= 禁忌（干扰项，不解锁） ================= */
+var TABOOS = {
+  '生辰相冲':'时辰相冲，红线自断。',
+  '尸身不腐':'尸身不腐，怨气难消。',
+  '活人配婚':'犯者必遭反噬。'
+};
+
+/* ================= 通用工具 ================= */
+function norm(s){ return (s||'').replace(/[\s，。、,.!！?？;；:：·「」『』"'“”（）()《》—\-]/g,''); }
+
+function showMsg(text,type){
+  clearTimeout(msgTimer);
+  searchMsg.textContent = text;
+  searchMsg.className = 'show ' + (type||'faint');
+  msgTimer = setTimeout(function(){ searchMsg.className=''; }, type==='taboo'?4200:2600);
+}
+
+/* ================= 程序化"老照片"（Canvas 生成，无需外部图片） ================= */
+function rng(seed){
+  var a = seed>>>0;
+  return function(){
+    a |= 0; a = (a + 0x6D2B79F5)|0;
+    var t = Math.imul(a ^ (a>>>15), 1|a);
+    t = (t + Math.imul(t ^ (t>>>7), 61|t)) ^ t;
+    return ((t ^ (t>>>14))>>>0)/4294967296;
+  };
+}
+function grain(ctx,w,h,r,amt){
+  var id = ctx.getImageData(0,0,w,h), d = id.data;
+  for(var i=0;i<d.length;i+=4){
+    var n = (r()*2-1)*amt;
+    d[i]+=n; d[i+1]+=n; d[i+2]+=n;
+  }
+  ctx.putImageData(id,0,0);
+}
+function scanlines(ctx,w,h){
+  ctx.fillStyle='rgba(0,0,0,0.14)';
+  for(var y=0;y<h;y+=3){ ctx.fillRect(0,y,w,1); }
+}
+function vignette(ctx,w,h){
+  var g=ctx.createRadialGradient(w/2,h*0.45,Math.min(w,h)*0.25,w/2,h*0.5,Math.max(w,h)*0.75);
+  g.addColorStop(0,'rgba(0,0,0,0)');
+  g.addColorStop(1,'rgba(0,0,0,0.75)');
+  ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+}
+function captionStrip(ctx,w,h,text){
+  ctx.fillStyle='#e6ded2'; ctx.fillRect(0,h-34,w,34);
+  ctx.fillStyle='#3a2a24';
+  ctx.font='14px KaiTi, STKaiti, serif';
+  ctx.textAlign='center'; ctx.textBaseline='middle';
+  ctx.fillText(text,w/2,h-17);
+}
+function photoPortrait(caption){
+  var c=document.createElement('canvas'); c.width=240; c.height=300;
+  var x=c.getContext('2d'); var r=rng(1337);
+  x.fillStyle='#191512'; x.fillRect(0,0,240,300);
+  var bg=x.createRadialGradient(120,120,20,120,130,200);
+  bg.addColorStop(0,'#3b342d'); bg.addColorStop(1,'#060505');
+  x.fillStyle=bg; x.fillRect(0,0,240,300);
+  x.fillStyle='#1a0d0c';
+  x.beginPath(); x.moveTo(14,300); x.quadraticCurveTo(66,192,120,186); x.quadraticCurveTo(174,192,226,300); x.closePath(); x.fill();
+  x.fillStyle='#050404';
+  x.beginPath(); x.ellipse(120,126,88,100,0,0,Math.PI*2); x.fill();
+  x.fillStyle='#cfc6ba';
+  x.beginPath(); x.ellipse(120,140,48,60,0,0,Math.PI*2); x.fill();
+  x.fillStyle='#050404';
+  x.beginPath(); x.ellipse(120,94,52,40,0,Math.PI,0); x.fill();
+  x.strokeStyle='#0a0808'; x.lineWidth=3;
+  x.beginPath(); x.moveTo(76,120); x.quadraticCurveTo(74,152,78,170); x.stroke();
+  x.beginPath(); x.moveTo(164,120); x.quadraticCurveTo(166,152,162,170); x.stroke();
+  x.fillStyle='#030303';
+  x.beginPath(); x.ellipse(102,136,7.5,9,0,0,Math.PI*2); x.fill();
+  x.beginPath(); x.ellipse(138,136,9.5,11.5,0,0,Math.PI*2); x.fill();
+  x.fillStyle='rgba(255,255,255,.75)';
+  x.fillRect(140,141,2,2);
+  x.fillRect(99,131,1.6,1.6);
+  x.strokeStyle='rgba(0,0,0,.28)'; x.lineWidth=1.5;
+  x.beginPath(); x.moveTo(120,146); x.lineTo(120,160); x.stroke();
+  x.strokeStyle='#5a0d0d'; x.lineWidth=2.2;
+  x.beginPath(); x.arc(120,178,17,0.18*Math.PI,0.82*Math.PI); x.stroke();
+  x.fillStyle='rgba(150,28,28,.5)';
+  x.beginPath(); x.arc(92,160,6.5,0,Math.PI*2); x.fill();
+  x.beginPath(); x.arc(148,160,6.5,0,Math.PI*2); x.fill();
+  x.fillStyle='rgba(230,222,210,.9)';
+  for(var i=0;i<6;i++){
+    var a=i/6*Math.PI*2;
+    x.beginPath(); x.ellipse(160+Math.cos(a)*8,74+Math.sin(a)*7,5.5,7.5,a,0,Math.PI*2); x.fill();
+  }
+  x.fillStyle='#8B0000'; x.beginPath(); x.arc(160,74,3,0,Math.PI*2); x.fill();
+  x.putImageData(x.getImageData(0,182,240,34),6,182);
+  grain(x,240,300,r,26); scanlines(x,240,300); vignette(x,240,300);
+  captionStrip(x,240,300,caption||'沈氏婉清 · 遗照（光绪廿三年）');
+  return c.toDataURL('image/png');
+}
+function photoWedding(){
+  var c=document.createElement('canvas'); c.width=300; c.height=240;
+  var x=c.getContext('2d'); var r=rng(7777);
+  x.fillStyle='#0c0808'; x.fillRect(0,0,300,240);
+  var bg=x.createRadialGradient(150,110,30,150,120,230);
+  bg.addColorStop(0,'rgba(110,18,14,.5)'); bg.addColorStop(1,'rgba(0,0,0,.92)');
+  x.fillStyle=bg; x.fillRect(0,0,300,240);
+  x.fillStyle='rgba(165,25,20,.5)'; x.font='60px KaiTi, STKaiti, serif'; x.textAlign='center';
+  x.fillText('囍',150,84);
+  x.fillStyle='#4a0808';
+  x.beginPath(); x.moveTo(52,240); x.quadraticCurveTo(80,160,92,140); x.quadraticCurveTo(104,122,102,58);
+  x.lineTo(128,58); x.quadraticCurveTo(124,126,140,148); x.quadraticCurveTo(154,166,176,240); x.closePath(); x.fill();
+  x.fillStyle='#cfc6b9';
+  x.beginPath(); x.ellipse(114,84,21,28,0,0,Math.PI*2); x.fill();
+  x.fillStyle='rgba(8,8,8,.9)';
+  x.beginPath(); x.ellipse(106,82,3.2,4.6,0,0,Math.PI*2); x.fill();
+  x.beginPath(); x.ellipse(122,82,3.2,4.6,0,0,Math.PI*2); x.fill();
+  x.fillStyle='rgba(230,222,210,.85)';
+  for(var i=0;i<5;i++){
+    var a=i/5*Math.PI*2;
+    x.beginPath(); x.ellipse(112+Math.cos(a)*8,190+Math.sin(a)*7,5,8,a,0,Math.PI*2); x.fill();
+  }
+  x.fillStyle='#8B0000'; x.beginPath(); x.arc(112,190,3,0,Math.PI*2); x.fill();
+  x.fillStyle='#e9e1d4';
+  x.beginPath(); x.ellipse(218,88,19,25,0,0,Math.PI*2); x.fill();
+  x.fillStyle='#222';
+  x.beginPath(); x.ellipse(218,66,19,15,0,Math.PI,0); x.fill();
+  x.strokeStyle='#111'; x.lineWidth=2; x.setLineDash([3,3]);
+  x.beginPath(); x.moveTo(208,84); x.lineTo(214,84); x.stroke();
+  x.beginPath(); x.moveTo(222,84); x.lineTo(228,84); x.stroke();
+  x.setLineDash([]);
+  x.fillStyle='rgba(170,30,30,.7)';
+  x.beginPath(); x.arc(206,96,3.6,0,Math.PI*2); x.fill();
+  x.beginPath(); x.arc(230,96,3.6,0,Math.PI*2); x.fill();
+  x.strokeStyle='#5a0d0d'; x.lineWidth=1.8;
+  x.beginPath(); x.arc(218,103,6,0.15*Math.PI,0.85*Math.PI); x.stroke();
+  x.fillStyle='#5e0b0b'; x.fillRect(197,118,42,96);
+  x.strokeStyle='#2e0505'; x.strokeRect(197,118,42,96);
+  x.fillStyle='rgba(150,20,18,.9)';
+  x.beginPath(); x.arc(156,120,7,0,Math.PI*2); x.fill();
+  x.strokeStyle='rgba(150,20,18,.7)'; x.lineWidth=1.5;
+  x.beginPath(); x.moveTo(150,126); x.quadraticCurveTo(140,170,150,200); x.stroke();
+  grain(x,300,240,r,26); scanlines(x,300,240); vignette(x,300,240);
+  captionStrip(x,300,240,'陈府 · 合婚留影（光绪廿三年）');
+  return c.toDataURL('image/png');
+}
+function photoHag(){
+  var c=document.createElement('canvas'); c.width=240; c.height=300;
+  var x=c.getContext('2d'); var r=rng(666);
+  x.fillStyle='#05070a'; x.fillRect(0,0,240,300);
+  var bg=x.createRadialGradient(120,90,10,120,120,240);
+  bg.addColorStop(0,'rgba(40,44,52,.9)'); bg.addColorStop(1,'rgba(2,3,5,1)');
+  x.fillStyle=bg; x.fillRect(0,0,240,300);
+  x.strokeStyle='#0b0d10'; x.lineWidth=34; x.lineCap='round';
+  x.beginPath(); x.moveTo(30,300); x.quadraticCurveTo(40,180,55,60); x.stroke();
+  x.lineWidth=14;
+  x.beginPath(); x.moveTo(38,220); x.quadraticCurveTo(90,190,120,170); x.stroke();
+  x.beginPath(); x.moveTo(42,140); x.quadraticCurveTo(20,110,10,70); x.stroke();
+  x.lineWidth=8;
+  x.beginPath(); x.moveTo(44,180); x.quadraticCurveTo(80,150,100,120); x.stroke();
+  x.fillStyle='#0a0d11'; x.fillRect(0,258,240,42);
+  x.fillStyle='#070809';
+  x.beginPath(); x.moveTo(150,262); x.quadraticCurveTo(138,200,160,160);
+  x.quadraticCurveTo(180,140,200,150); x.quadraticCurveTo(196,190,206,262); x.closePath(); x.fill();
+  x.beginPath(); x.arc(180,138,22,0,Math.PI*2); x.fill();
+  x.strokeStyle='#0c0e11'; x.lineWidth=5;
+  x.beginPath(); x.moveTo(152,258); x.lineTo(148,180); x.stroke();
+  var g=x.createRadialGradient(172,134,1,172,134,7);
+  g.addColorStop(0,'rgba(240,236,224,1)'); g.addColorStop(1,'rgba(240,236,224,0)');
+  x.fillStyle=g; x.beginPath(); x.arc(172,134,7,0,Math.PI*2); x.fill();
+  var g2=x.createRadialGradient(190,134,1,190,134,7);
+  g2.addColorStop(0,'rgba(240,236,224,1)'); g2.addColorStop(1,'rgba(240,236,224,0)');
+  x.fillStyle=g2; x.beginPath(); x.arc(190,134,7,0,Math.PI*2); x.fill();
+  x.fillStyle='#fff';
+  x.fillRect(174,135,1.6,1.6); x.fillRect(188,131,1.6,1.6);
+  grain(x,240,300,r,20); scanlines(x,240,300); vignette(x,240,300);
+  captionStrip(x,240,300,'槐婆（拍摄者不详 · 洗相馆拒收）');
+  return c.toDataURL('image/png');
+}
+function photoFetus(){
+  var c=document.createElement('canvas'); c.width=240; c.height=300;
+  var x=c.getContext('2d'); var r=rng(4242);
+  x.fillStyle='#0a0606'; x.fillRect(0,0,240,300);
+  var g=x.createRadialGradient(120,140,8,120,140,110);
+  g.addColorStop(0,'#2c0a08'); g.addColorStop(.7,'#180606'); g.addColorStop(1,'#0a0606');
+  x.fillStyle=g;
+  x.beginPath(); x.ellipse(120,145,95,115,0,0,Math.PI*2); x.fill();
+  x.strokeStyle='rgba(139,0,0,.4)'; x.lineWidth=1.5;
+  x.beginPath(); x.ellipse(120,145,95,115,0,0,Math.PI*2); x.stroke();
+  x.strokeStyle='rgba(120,20,16,.5)'; x.lineWidth=3;
+  for(var i=0;i<7;i++){
+    var a=r()*Math.PI*2, rr=40+r()*55;
+    var px=120+Math.cos(a)*rr, py=145+Math.sin(a)*rr*0.8;
+    x.beginPath(); x.arc(px,py,14+r()*10, r()*Math.PI, r()*Math.PI+1.4*Math.PI); x.stroke();
+  }
+  x.fillStyle='rgba(210,198,182,.85)';
+  x.beginPath(); x.ellipse(120,150,30,38,0,0,Math.PI*2); x.fill();
+  x.fillStyle='#000';
+  x.beginPath(); x.ellipse(109,146,5,7,0,0,Math.PI*2); x.fill();
+  x.beginPath(); x.ellipse(131,146,5,7,0,0,Math.PI*2); x.fill();
+  x.fillStyle='#3a0505';
+  x.beginPath(); x.ellipse(120,166,8,11,0,0,Math.PI*2); x.fill();
+  x.fillStyle='rgba(15,15,18,.8)';
+  for(var j=0;j<5;j++){
+    var qx=80+r()*80, qy=180+r()*60;
+    x.beginPath(); x.ellipse(qx,qy,3+r()*3,5+r()*4, r()*Math.PI,0,Math.PI*2); x.fill();
+  }
+  grain(x,240,300,r,34); scanlines(x,240,300); vignette(x,240,300);
+  captionStrip(x,240,300,'（照片无法正常显影）');
+  return c.toDataURL('image/png');
+}
+function hydratePhotos(root){
+  var gens = { wedding:photoWedding, portrait_home:function(){return photoPortrait('城南沈氏之女 · 遗照（光绪廿三年）');},
+               portrait_dossier:function(){return photoPortrait('沈氏婉清 · 遗照（光绪廿三年）');},
+               hag:photoHag, fetus:photoFetus };
+  var imgs = root.querySelectorAll('img[data-photo]');
+  for(var i=0;i<imgs.length;i++){
+    var kind = imgs[i].getAttribute('data-photo');
+    if(gens[kind]){ imgs[i].src = gens[kind](); }
+  }
+}
+
+/* ================= Web Audio（白噪音 / 尖叫 / 低鸣） ================= */
+function audio(){
+  if(!audioCtx){
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if(!AC) return null;
+    audioCtx = new AC();
+  }
+  if(audioCtx.state==='suspended'){
+    audioCtx.resume().catch(function(){});
+  }
+  return audioCtx;
+}
+function noiseBuffer(ctx,dur){
+  var len=Math.floor(ctx.sampleRate*dur);
+  var buf=ctx.createBuffer(1,len,ctx.sampleRate);
+  var d=buf.getChannelData(0);
+  for(var i=0;i<len;i++){ d[i]=Math.random()*2-1; }
+  return buf;
+}
+function playScream(){
+  var ctx=audio(); if(!ctx) return;
+  var t0=ctx.currentTime;
+  var o1=ctx.createOscillator(); o1.type='sawtooth';
+  o1.frequency.setValueAtTime(820,t0);
+  o1.frequency.exponentialRampToValueAtTime(180,t0+1.15);
+  var g1=ctx.createGain();
+  g1.gain.setValueAtTime(0.0001,t0);
+  g1.gain.exponentialRampToValueAtTime(0.5,t0+0.04);
+  g1.gain.exponentialRampToValueAtTime(0.0001,t0+1.3);
+  o1.connect(g1); g1.connect(ctx.destination);
+  o1.start(t0); o1.stop(t0+1.35);
+  var o2=ctx.createOscillator(); o2.type='square';
+  o2.frequency.setValueAtTime(1240,t0);
+  o2.frequency.exponentialRampToValueAtTime(260,t0+1.05);
+  var g2=ctx.createGain();
+  g2.gain.setValueAtTime(0.0001,t0);
+  g2.gain.exponentialRampToValueAtTime(0.2,t0+0.03);
+  g2.gain.exponentialRampToValueAtTime(0.0001,t0+1.15);
+  o2.connect(g2); g2.connect(ctx.destination);
+  o2.start(t0); o2.stop(t0+1.2);
+  var n=ctx.createBufferSource(); n.buffer=noiseBuffer(ctx,1.4);
+  var bp=ctx.createBiquadFilter(); bp.type='bandpass'; bp.frequency.value=900; bp.Q.value=0.6;
+  var ng=ctx.createGain();
+  ng.gain.setValueAtTime(0.0001,t0);
+  ng.gain.exponentialRampToValueAtTime(0.32,t0+0.05);
+  ng.gain.exponentialRampToValueAtTime(0.0001,t0+1.3);
+  n.connect(bp); bp.connect(ng); ng.connect(ctx.destination);
+  n.start(t0); n.stop(t0+1.35);
+}
+function playGong(){
+  var ctx=audio(); if(!ctx) return;
+  var t0=ctx.currentTime;
+  var o=ctx.createOscillator(); o.type='sine';
+  o.frequency.setValueAtTime(120,t0);
+  o.frequency.exponentialRampToValueAtTime(48,t0+2.2);
+  var g=ctx.createGain();
+  g.gain.setValueAtTime(0.0001,t0);
+  g.gain.exponentialRampToValueAtTime(0.3,t0+0.03);
+  g.gain.exponentialRampToValueAtTime(0.0001,t0+2.6);
+  o.connect(g); g.connect(ctx.destination);
+  o.start(t0); o.stop(t0+2.7);
+  var o2=ctx.createOscillator(); o2.type='triangle';
+  o2.frequency.setValueAtTime(240,t0);
+  o2.frequency.exponentialRampToValueAtTime(90,t0+1.6);
+  var g2=ctx.createGain();
+  g2.gain.setValueAtTime(0.0001,t0);
+  g2.gain.exponentialRampToValueAtTime(0.12,t0+0.02);
+  g2.gain.exponentialRampToValueAtTime(0.0001,t0+1.9);
+  o2.connect(g2); g2.connect(ctx.destination);
+  o2.start(t0); o2.stop(t0+2);
+}
+function playErr(){
+  var ctx=audio(); if(!ctx) return;
+  var t0=ctx.currentTime;
+  var o=ctx.createOscillator(); o.type='square'; o.frequency.value=98;
+  var g=ctx.createGain();
+  g.gain.setValueAtTime(0.0001,t0);
+  g.gain.exponentialRampToValueAtTime(0.05,t0+0.02);
+  g.gain.exponentialRampToValueAtTime(0.0001,t0+0.16);
+  o.connect(g); g.connect(ctx.destination);
+  o.start(t0); o.stop(t0+0.2);
+}
+function startDrone(){
+  var ctx=audio(); if(!ctx||droneNodes) return;
+  var t0=ctx.currentTime;
+  var g=ctx.createGain(); g.gain.value=0.0001;
+  g.gain.linearRampToValueAtTime(0.045,t0+7);
+  var o1=ctx.createOscillator(); o1.type='sine'; o1.frequency.value=52;
+  var o2=ctx.createOscillator(); o2.type='sine'; o2.frequency.value=52.7;
+  var lfo=ctx.createOscillator(); lfo.frequency.value=0.06;
+  var lg=ctx.createGain(); lg.gain.value=0.018;
+  lfo.connect(lg); lg.connect(g.gain);
+  var n=ctx.createBufferSource(); n.buffer=noiseBuffer(ctx,2); n.loop=true;
+  var nf=ctx.createBiquadFilter(); nf.type='bandpass'; nf.frequency.value=320; nf.Q.value=0.5;
+  var ng=ctx.createGain(); ng.gain.value=0.012;
+  n.connect(nf); nf.connect(ng); ng.connect(g);
+  o1.connect(g); o2.connect(g); g.connect(ctx.destination);
+  o1.start(); o2.start(); lfo.start(); n.start();
+  droneNodes={g:g,o1:o1,o2:o2,lfo:lfo,n:n};
+}
+function stopDrone(){
+  if(!droneNodes) return;
+  var d=droneNodes;
+  droneNodes=null;
+  try{
+    var ctx=audio();
+    if(ctx){
+      d.g.gain.cancelScheduledValues(ctx.currentTime);
+      d.g.gain.setValueAtTime(Math.max(0.0001,d.g.gain.value||0.05),ctx.currentTime);
+      d.g.gain.linearRampToValueAtTime(0.0001,ctx.currentTime+2);
+    }
+    setTimeout(function(){
+      try{ d.o1.stop(); d.o2.stop(); d.lfo.stop(); d.n.stop(); }catch(e){}
+    },2200);
+  }catch(e){}
+}
+function thump(ctx,off){
+  var t0=ctx.currentTime+off;
+  var o=ctx.createOscillator(); o.type='sine';
+  o.frequency.setValueAtTime(58,t0);
+  o.frequency.exponentialRampToValueAtTime(40,t0+0.09);
+  var g=ctx.createGain();
+  g.gain.setValueAtTime(0.0001,t0);
+  g.gain.exponentialRampToValueAtTime(0.09,t0+0.015);
+  g.gain.exponentialRampToValueAtTime(0.0001,t0+0.14);
+  o.connect(g); g.connect(ctx.destination);
+  o.start(t0); o.stop(t0+0.16);
+}
+function startHeartbeat(){
+  if(heartbeatTimer) return;
+  var ctx=audio(); if(!ctx) return;
+  heartbeatTimer=setInterval(function(){
+    thump(ctx,0); thump(ctx,0.22);
+  },1200);
+}
+function stopHeartbeat(){
+  if(heartbeatTimer){ clearInterval(heartbeatTimer); heartbeatTimer=null; }
+}
+function playRing(){
+  var ctx=audio(); if(!ctx) return;
+  for(var k=0;k<3;k++){
+    (function(kk){
+      var t0=ctx.currentTime+kk*1.7;
+      for(var j=0;j<2;j++){
+        var o=ctx.createOscillator(); o.type='sine';
+        o.frequency.value = j===0?880:660;
+        var g=ctx.createGain();
+        var s=t0+j*0.2;
+        g.gain.setValueAtTime(0.0001,s);
+        g.gain.exponentialRampToValueAtTime(0.12,s+0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001,s+0.17);
+        o.connect(g); g.connect(ctx.destination);
+        o.start(s); o.stop(s+0.19);
+      }
+    })(k);
+  }
+}
+
+/* ================= 突脸惊吓 ================= */
+function triggerScare(){
+  if(scaring) return;
+  if(!scareEnabled){
+    console.warn('%c[阴缘堂] 恐怖效果已关闭。可在页面底部重新开启。','color:#8B0000');
+    return;
+  }
+  scaring=true;
+  var v='v'+(1+Math.floor(Math.random()*4));
+  var cap=scareOverlay.querySelector('.scare-cap');
+  cap.textContent = {v1:'轮到你了。', v2:'你查到我了。', v3:'跟我走……', v4:'子时到了。'}[v];
+  scareOverlay.className = v;
+  requestAnimationFrame(function(){ scareOverlay.classList.add('on'); });
+  playScream();
+  if(!firstScareDone){
+    firstScareDone=true;
+    console.log('%c[阴缘堂] 惊吓接口已解锁：在控制台输入 window.triggerScare() 可随时召唤。','color:#a31515');
+  }
+  setTimeout(function(){ scareOverlay.classList.add('calm'); },1250);
+  setTimeout(function(){ scareOverlay.classList.add('out'); },3800);
+  setTimeout(function(){
+    scareOverlay.classList.remove('on'); scareOverlay.classList.remove('calm'); scareOverlay.classList.remove('out');
+    scareOverlay.className='';
+    scaring=false;
+  },5300);
+}
+function maybeScare(chance){
+  if(!scareEnabled || chance<=0) return;
+  var delay = 1600 + Math.random()*3200;
+  setTimeout(function(){
+    if(!scaring && Math.random()<chance){ triggerScare(); }
+  },delay);
+}
+
+/* ================= 页面切换 ================= */
+function fadeOut(cb){
+  busy=true;
+  blackout.classList.add('on');
+  setTimeout(function(){ cb && cb(); },820);
+}
+function fadeIn(){
+  setTimeout(function(){ blackout.classList.remove('on'); busy=false; },60);
+}
+function typewriter(root,onDone){
+  if(!root || !root.querySelectorAll){ onDone && onDone(); return; }
+  var paras = root.querySelectorAll('p[data-type]');
+  if(!paras.length){ onDone && onDone(); return; }
+  var tk = ++typeToken;
+  var queue = [];
+  for(var i=0;i<paras.length;i++){
+    queue.push({el:paras[i], text:paras[i].textContent});
+    paras[i].textContent='';
+  }
+  var qi=0, ci=0;
+  function tick(){
+    if(tk!==typeToken) return;
+    if(qi>=queue.length){ onDone && onDone(); return; }
+    var q=queue[qi];
+    if(ci<q.text.length){
+      q.el.textContent += q.text.charAt(ci++);
+      var pause = Math.random()<0.08 ? 220+Math.random()*420 : 46+Math.random()*50;
+      setTimeout(tick,pause);
+    }else{
+      qi++; ci=0;
+      setTimeout(tick,420+Math.random()*380);
+    }
+  }
+  tick();
+}
+function goPage(idx,allowScare){
+  var chain = stage===1 ? STORY1 : STORY2;
+  var story = chain[idx];
+  fadeOut(function(){
+    document.title = story.docTitle;
+    currentPage = idx;
+    main.innerHTML = story.html;
+    var dos = main.firstElementChild;
+    if(story.cls && dos){ dos.classList.add(story.cls); }
+    document.body.classList.remove('deep','deeper');
+    if(stage===2 || idx>=5){ document.body.classList.add('deep'); }
+    if((stage===2 && idx>=3) || (stage===1 && idx>=6)){ document.body.classList.add('deeper'); }
+    hydratePhotos(main);
+    var btn = main.querySelector('.back-home');
+    if(btn){ btn.addEventListener('click',function(){ goHome(); }); }
+    fadeIn();
+    window.scrollTo(0,0);
+    if(stage===1 && idx===7){ enterStage2(); }
+    else if(stage===2 && idx===5){ trueEndFlow(); }
+    if(!gameOver && (stage===2 || (stage===1 && idx>=5))){ startHeartbeat(); } else { stopHeartbeat(); }
+    typewriter(dos,function(){
+      if(allowScare){ maybeScare(story.scare); }
+    });
+  });
+}
+function unlock(idx){
+  progress = idx;
+  if(stage===1 && idx>stage1Max){ stage1Max=idx; }
+  playGong();
+  if(stage===1){
+    if(idx<7 && idx>=2){ startDrone(); }
+    else if(idx===7){ stopDrone(); }
+    if(idx===4 && !phoneDone){ schedulePhone(); }
+  }else{
+    startDrone();
+  }
+  goPage(idx,true);
+}
+function goAppendix(key){
+  var ap = APPENDIX[key];
+  playGong();
+  fadeOut(function(){
+    document.title = '阴缘堂 · 附录 —— ' + key;
+    currentPage = 'appendix';
+    main.innerHTML = ap.html;
+    document.body.classList.remove('deep','deeper');
+    var btn = main.querySelector('.back-home');
+    if(btn){ btn.addEventListener('click',function(){ goHome(); }); }
+    stopHeartbeat();
+    fadeIn();
+    window.scrollTo(0,0);
+    typewriter(main.firstElementChild,null);
+  });
+}
+function goHome(cb){
+  fadeOut(function(){
+    currentPage='home';
+    document.title='阴缘堂 · 百年老号 —— 冥界姻缘介绍所';
+    main.innerHTML=HOME_HTML;
+    document.body.classList.remove('deep','deeper');
+    if(stage===2 || gameOver){ addHomeEpilogue(); }
+    if(gameOver){ addTrueEndEpilogue(); }
+    hydratePhotos(main);
+    stopHeartbeat();
+    fadeIn();
+    window.scrollTo(0,0);
+    if(cb){ setTimeout(cb,80); }
+  });
+}
+function enterStage2(){
+  stage = 2;
+  progress = -1;
+  document.body.classList.add('reversed');
+  xi.classList.add('pale');
+  searchHint.textContent='轮回未止。若想自救，请查：血契。';
+  console.log('%c[阴缘堂] 第一圈完。轮回未止。您还要查下去吗？','color:#e8e0d8;font-family:"KaiTi",serif;');
+}
+function trueEndFlow(){
+  gameOver=true;
+  stopDrone();
+  stopHeartbeat();
+  searchHint.textContent='本所已无更多记录。';
+  xi.classList.add('pale');
+  console.log('%c[阴缘堂] 第二圈完。本所已将门关上。欢迎您，长住。','color:#8B0000;font-family:"KaiTi",serif;');
+}
+function addHomeEpilogue(){
+  var cases = document.getElementById('cases');
+  if(cases){
+    var div=document.createElement('div');
+    div.className='case';
+    div.innerHTML='<div class="quote"><p>「很满意。下一个，就轮到您了。」</p><p class="who">—— 阴缘堂 · 谨启</p></div>';
+    cases.appendChild(div);
+  }
+  var contact = document.getElementById('contact');
+  if(contact){
+    var p=document.createElement('p');
+    p.className='odd';
+    p.textContent='※ 系统提示：本所已收到您的生辰八字。';
+    contact.appendChild(p);
+  }
+  var cap = document.querySelector('.hall-caption');
+  if(cap){ cap.textContent='堂上纸人 · 喜服白花 · 它好像换了个姿势'; }
+}
+function addTrueEndEpilogue(){
+  var cases = document.getElementById('cases');
+  if(cases){
+    var div=document.createElement('div');
+    div.className='case';
+    div.innerHTML='<div class="quote"><p>「货已送出，概不退换。」</p><p class="who">—— 阴缘堂 · 账房</p></div>';
+    cases.appendChild(div);
+  }
+  var cap = document.querySelector('.hall-caption');
+  if(cap){ cap.textContent='堂上纸人 · 喜服白花 · 它正在看着您'; }
+}
+function schedulePhone(){
+  phoneDone=true;
+  function ring(){
+    if(busy||scaring){
+      if(phoneRetry<2){ phoneRetry++; setTimeout(ring,25000); }
+      return;
+    }
+    showMsg('电话响了。三声。没有人说话。','taboo');
+    playRing();
+  }
+  setTimeout(ring, 40000+Math.random()*25000);
+}
+function whisper(){
+  if(!document.body || !document.body.appendChild){ return; }
+  var el=document.getElementById('whisper');
+  if(!el){
+    el=document.createElement('div');
+    el.id='whisper';
+    document.body.appendChild(el);
+  }
+  el.textContent=WHISPERS[Math.floor(Math.random()*WHISPERS.length)];
+  el.classList.add('show');
+  clearTimeout(whisperTimer);
+  whisperTimer=setTimeout(function(){ el.classList.remove('show'); },2600);
+}
+
+/* ================= 导航与搜索 ================= */
+function scrollToSection(id){
+  var el=document.querySelector(id);
+  if(el){ el.scrollIntoView({behavior:'smooth',block:'start'}); }
+}
+function bindNav(){
+  var links=document.querySelectorAll('nav a[data-nav]');
+  for(var i=0;i<links.length;i++){
+    links[i].onclick=function(e){
+      e.preventDefault();
+      var id=this.getAttribute('href');
+      if(currentPage!=='home'){
+        goHome(function(){ scrollToSection(id); });
+      }else{
+        scrollToSection(id);
+      }
+    };
+  }
+}
+function handleSearch(){
+  if(busy||scaring) return;
+  var q=norm(searchInput.value);
+  searchInput.value='';
+  searchInput.blur();
+  if(!q) return;
+  if(gameOver){ showMsg('本所已无更多记录。','faint'); playErr(); return; }
+  var chain = stage===1 ? STORY1 : STORY2;
+  var idx=-1;
+  for(var i=0;i<chain.length;i++){ if(chain[i].key===q){ idx=i; break; } }
+  if(idx>=0){
+    if(idx===progress+1){ unlock(idx); }
+    else if(idx<=progress){ goPage(idx,false); }
+    else { showMsg('本所无此记录。','faint'); playErr(); }
+    return;
+  }
+  if(Object.prototype.hasOwnProperty.call(TABOOS,q)){
+    showMsg(TABOOS[q],'taboo'); playErr(); return;
+  }
+  var ap=APPENDIX[q];
+  if(ap && ap.requires<=stage1Max){
+    goAppendix(q); return;
+  }
+  wrongCount++;
+  if(wrongCount>=2 && Math.random()<0.18){
+    var alts=['本所无此记录……您确定查的是这个词吗？','本所无此记录。刚才，有人与您查了同一个词。','本所无此记录。请勿在子时之外查询。'];
+    showMsg(alts[Math.floor(Math.random()*alts.length)],'faint');
+  }else{
+    showMsg('本所无此记录。','faint');
+  }
+}
+searchForm.addEventListener('submit',function(e){
+  e.preventDefault();
+  handleSearch();
+});
+searchInput.addEventListener('keydown',function(e){
+  if(e.key==='Enter' && (e.isComposing || e.keyCode===229)){
+    e.preventDefault();
+    e.stopPropagation();
+  }
+});
+
+/* ================= 恐怖效果开关（localStorage） ================= */
+function initScare(){
+  var saved=null;
+  try{ saved=localStorage.getItem('scare_enabled'); }catch(e){}
+  if(saved===null){
+    var ok=false;
+    try{
+      ok = confirm('本页包含突然出现的惊吓画面和刺耳音效（Web Audio 尖叫声），是否继续？');
+    }catch(e){ ok=false; }
+    scareEnabled = ok;
+    try{ localStorage.setItem('scare_enabled', ok?'true':'false'); }catch(e){}
+  }else{
+    scareEnabled = saved==='true';
+  }
+  scareToggle.textContent = scareEnabled ? '恐怖效果：开' : '恐怖效果：关';
+}
+scareToggle.addEventListener('click',function(){
+  scareEnabled = !scareEnabled;
+  try{ localStorage.setItem('scare_enabled', scareEnabled?'true':'false'); }catch(e){}
+  scareToggle.textContent = scareEnabled ? '恐怖效果：开' : '恐怖效果：关';
+  showMsg(scareEnabled ? '恐怖效果已开启。' : '恐怖效果已关闭。','faint');
+});
+
+/* ================= 氛围事件：随机惊吓（约每秒 1/1000）+ 耳语 ================= */
+setInterval(function(){
+  if(gameOver || !scareEnabled || scaring || busy || progress<2) return;
+  if(Math.random()<0.001){ triggerScare(); }
+},1000);
+var WHISPERS=['回头','别回头','她在看','您的名字','谁在说话','别查了','快走','下面','他来了','看看床底','子时了'];
+setInterval(function(){
+  if(gameOver || scaring || busy) return;
+  if(stage===2 || (stage===1 && progress>=2)){
+    if(Math.random()<0.45){ whisper(); }
+  }
+},55000);
+
+/* ================= 控制台彩蛋 ================= */
+console.log('%c阴缘堂','font-family:"KaiTi","STKaiti",serif;font-size:30px;color:#8B0000;text-shadow:0 0 8px rgba(139,0,0,.8);');
+console.log('%c您来了。%c请用页面下方的查询框，查阅本所宗卷。','color:#c96a58;font-family:"KaiTi",serif;','color:#8a8a8a;');
+console.log('%c提示：关键词都藏在字里行间，不做任何高亮。','color:#6a6a6a;font-size:12px;');
+console.log('%c提示：本页含突脸惊吓与尖叫声，可在页脚「恐怖效果」处随时关闭。','color:#6a6a6a;font-size:12px;');
+
+/* ================= 初始化 ================= */
+window.triggerScare = triggerScare;
+hydratePhotos(main);
+bindNav();
+initScare();
+
+})();
+</script>
+</body>
+</html>
